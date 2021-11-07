@@ -1,0 +1,7 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: app1
+spec:
+  externalName: old.mycompany.internal
+  type: ExternalName
