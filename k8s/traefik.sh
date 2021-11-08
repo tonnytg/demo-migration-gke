@@ -20,3 +20,7 @@ export project_name="abc"
 gcloud beta dns --project=${project_name} managed-zones create \
     zonedns.internal --description="test dns zone" \
     --dns-name="myzonedns.internal." --visibility="private" --networks="default"
+
+# install routes of traefik
+kubectl apply -f traefik-conf/app1-internal-svc.yaml --namespace app1-ns
+kubectl apply -f traefik-conf/app1-ingress-route.yaml --namespace app1-ns
